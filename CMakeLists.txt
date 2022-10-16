@@ -20,6 +20,7 @@ set(SOURCE_FILES src/base32.c src/base64.c)
 set(CMAKE_C_FLAGS "-Wall -Werror -fPIC")
 
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
+add_library(${PROJECT_NAME}.static STATIC ${SOURCE_FILES})
 
 target_link_libraries(${PROJECT_NAME} ${PROJECT_LIBS})
 
